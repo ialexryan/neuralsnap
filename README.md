@@ -22,7 +22,7 @@ By [Ross Goodwin](http://rossgoodwin.com), 2016
 
 ## Intent
 
-This project, in many ways a follow-up on [word.camera](https://word.camera), was created on the shoulders of two spectacular open source contributions by [Andrej Karpathy](https://github.com/karpathy): [NeuralTalk2](https://github.com/karpathy/neuraltalk) and [Char-RNN](https://github.com/karpathy/char-rnn), both of which run in [Torch](http://torch.ch/). The code I've provided in this repository is a modest Python wrapper for a few of Karpathy's scripts, and a means to experiment with a few models that I've trained on [Nvidia K80 GPUs](http://www.nvidia.com/object/tesla-k80.html) using the High Performance Computing facilities at NYU.
+This project, in many ways a follow-up on [word.camera](https://word.camera), was created on the shoulders of two spectacular open source contributions by [Andrej Karpathy](https://github.com/karpathy): [NeuralTalk2](https://github.com/karpathy/neuraltalk2) and [Char-RNN](https://github.com/karpathy/char-rnn), both of which run in [Torch](http://torch.ch/). The code I've provided in this repository is a modest Python wrapper for a few of Karpathy's scripts, and a means to experiment with a few models that I've trained on [Nvidia K80 GPUs](http://www.nvidia.com/object/tesla-k80.html) using the High Performance Computing facilities at NYU.
 
 In my research, I am developing tools that I hope will serve to augment human creativity. These are the first neural network models to emerge from my explorations, and I've decided to make them available to others:
 
@@ -36,7 +36,7 @@ NOTE: These models are licensed under the Creative Commons Attribution-NonCommer
 
 ## How It Works
 
-[NeuralTalk2](https://github.com/karpathy/neuraltalk) uses [convolutional](https://en.wikipedia.org/wiki/Convolutional_neural_network) and [recurrent](https://en.wikipedia.org/wiki/Recurrent_neural_network) neural networks to caption images. I trained my own model on the [MSCOCO dataset](http://mscoco.org/), using the general guidelines Karpathy outlines in his documentation, but made adjustments to increase verbosity.
+[NeuralTalk2](https://github.com/karpathy/neuraltalk2) uses [convolutional](https://en.wikipedia.org/wiki/Convolutional_neural_network) and [recurrent](https://en.wikipedia.org/wiki/Recurrent_neural_network) neural networks to caption images. I trained my own model on the [MSCOCO dataset](http://mscoco.org/), using the general guidelines Karpathy outlines in his documentation, but made adjustments to increase verbosity.
 
 I then trained a recurrent neural network using [Char-RNN](https://github.com/karpathy/char-rnn) on about 40MB of (mostly) 20th-century poetry from a variety of writers (and a variety of cultures) around the world.
 
@@ -46,7 +46,7 @@ In the output examples above, the red text is the image caption, and the poetry-
 
 I have tested this software on Ubuntu 14.04 and 15.10. You can try other OS options at your own risk -- in theory, it should run on anything that can run Torch and Python, although I've heard that [NeuralTalk2 does not play nice with the Raspberry Pi](https://github.com/SaMnCo/docker-neuraltalk2).
 
-You'll need to clone the [NeuralTalk2](https://github.com/karpathy/neuraltalk) and [Char-RNN](https://github.com/karpathy/char-rnn) repos into the main folder, then follow Karpathy's README instructions to install the dependencies for NeuralTalk2 -- you don't need to worry about any of the GPU or training stuff, unless you want to use your own models. (The models I've provided are calibrated to run on CPUs.) Thankfully, the dependencies of Char-RNN are a subset of those required for NeuralTalk2.
+You'll need to clone the [NeuralTalk2](https://github.com/karpathy/neuraltalk2) and [Char-RNN](https://github.com/karpathy/char-rnn) repos into the main folder, then follow Karpathy's README instructions to install the dependencies for NeuralTalk2 -- you don't need to worry about any of the GPU or training stuff, unless you want to use your own models. (The models I've provided are calibrated to run on CPUs.) Thankfully, the dependencies of Char-RNN are a subset of those required for NeuralTalk2.
 
 ## Usage
 
